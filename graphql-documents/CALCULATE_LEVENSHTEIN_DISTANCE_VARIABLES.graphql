@@ -1,0 +1,5 @@
+mutation levenshteinDistance($input: LevenshteinDistanceInput!) {
+  levenshteinDistance(input: $input) {
+    levenshteinDistance
+  }
+}

@@ -1,0 +1,20 @@
+input LevenshteinDistanceInput {
+  s1: String!
+  s2: String!
+  substitutionCost: Int = 1
+  transpositions: Boolean = true
+}
+
+type LevenshteinDistancePayload {
+  levenshteinDistance: Float
+}
+
+type Mutation {
+  levenshteinDistance(
+    input: LevenshteinDistanceInput!
+  ): LevenshteinDistancePayload
+}
+
+type Query {
+  healthcheck: Boolean!
+}
